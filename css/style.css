@@ -27,11 +27,11 @@ header{           /*DEBUG*/
 .row-cols-3 > .col{
     flex-basis: calc(100% /3);
     margin: 10px 0;
+    padding: 5px;
 }
 
 .debug [class^='col'] {
 	border: 3px dashed black;
-	padding: 5px;
     background-color: blueviolet;
 }
 
@@ -72,7 +72,7 @@ header{           /*DEBUG*/
 
 /*CORPO PAGINA*/
 main > section{
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 .container.section .row{
@@ -85,10 +85,11 @@ main > section{
 
 .col.col-small{
     flex-basis: 40%;
+    background-color: aqua;
 }
 
 main > section:nth-child(2n){
-    background-color: lightslategray;
+    background-color: rgb(203, 203, 203);
 }
 
 .container .row.row-reverse{
@@ -96,8 +97,53 @@ main > section:nth-child(2n){
 }
 
 /*Sezione no flex*/
-section .big.container{
+.debug section .big.container{           /*DEBUG*/
     min-height: 500px;
     background-color: rgb(52, 121, 0);
     border: 2px dashed black;
+}
+
+/*FOOTER*/
+footer{
+    background-color: rgb(66, 64, 89);
+}
+
+footer > section:first-child{
+    border-bottom: 2px solid gray;
+    padding: 5px 0 25px 0;
+}
+
+
+.row-cols-5 .col.col-30{
+    flex-basis: 30%;
+}
+
+.row-cols-5 :not(.col-30){
+    background-color: aqua;
+    flex-basis: calc(70% / 4);
+}
+
+.debug .row-cols-5{            /*DEBUG*/
+    min-height: 300px;
+}
+
+footer section:last-child{
+    padding-top: 25px;
+}
+
+.debug .container.nav{            /*DEBUG*/
+    background-color: blue;
+}
+
+.container.nav{
+    padding: 15px 0;
+}
+
+.col.col-logo{
+    align-self: flex-start;
+    display: flex;
+}
+
+.col.col-button{
+    align-items: flex-end;
 }
