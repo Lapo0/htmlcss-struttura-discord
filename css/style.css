@@ -20,15 +20,13 @@ header{           /*DEBUG*/
 .container{
     max-width: 800px;
     margin: 0 auto;
-    padding: 10px;
 }
 
-.debug .row{           /*DEBUG*/
-    background-color: blue;
-}
+
 
 .row-cols-3 > .col{
     flex-basis: calc(100% /3);
+    margin: 10px 0;
 }
 
 .debug [class^='col'] {
@@ -69,5 +67,37 @@ header{           /*DEBUG*/
 .debug .small.container{           /*DEBUG*/
     background-color: blueviolet;
     height: 200px;
-    border: 1px dashed black;
+    border: 2px dashed black;
+}
+
+/*CORPO PAGINA*/
+main > section{
+    padding: 40px 0;
+}
+
+.container.section .row{
+    min-height: 300px;
+}
+
+.col.col-big{
+    flex-basis: 60%;
+}
+
+.col.col-small{
+    flex-basis: 40%;
+}
+
+main > section:nth-child(2n){
+    background-color: lightslategray;
+}
+
+.container .row.row-reverse{
+    flex-direction: row-reverse;
+}
+
+/*Sezione no flex*/
+section .big.container{
+    min-height: 500px;
+    background-color: rgb(52, 121, 0);
+    border: 2px dashed black;
 }
