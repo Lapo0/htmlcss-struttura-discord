@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+[class^='row']{
+    display: flex;
+}
+
+/*HEADER*/
+header{           /*DEBUG*/
+    background-color: aqua;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.debug .row{           /*DEBUG*/
+    background-color: blue;
+}
+
+.row-cols-3 > .col{
+    flex-basis: calc(100% /3);
+}
+
+.debug [class^='col'] {
+	border: 3px dashed black;
+	padding: 5px;
+    background-color: blueviolet;
+}
+
+/*Colonne header in container*/
+.col.col-left{
+    text-align: left;
+}
+
+.col.col-center{
+    text-align: center;
+}
+
+.col.col-right{
+    text-align: right;
+}
+
+.section-header{           /*DEBUG*/
+    background-color: blue;
+    min-height: 200px;
+}
+
+/*Piccolo container*/
+.section-header{
+    padding: 25px 0;
+}
+
+.small.container{
+    max-width: 600px;
+    text-align: center;
+    padding: 25px 25px;
+}
+
+.debug .small.container{           /*DEBUG*/
+    background-color: blueviolet;
+    height: 200px;
+    border: 1px dashed black;
+}
