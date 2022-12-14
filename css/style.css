@@ -23,14 +23,13 @@ header{           /*DEBUG*/
 }
 
 
-
 .row-cols-3 > .col{
     flex-basis: calc(100% /3);
     margin: 10px 0;
     padding: 5px;
 }
 
-.debug [class^='col'] {
+.debug [class^='col'] {          /*DEBUG*/
 	border: 3px dashed black;
     background-color: blueviolet;
 }
@@ -75,7 +74,7 @@ main > section{
     padding: 30px 0;
 }
 
-.container.section .row{
+.container.section .row{          /*DEBUG*/
     min-height: 300px;
 }
 
@@ -85,6 +84,9 @@ main > section{
 
 .col.col-small{
     flex-basis: 40%;
+}
+
+.debug .col.col-small{            /*DEBUG*/
     background-color: aqua;
 }
 
@@ -97,9 +99,9 @@ main > section:nth-child(2n){
 }
 
 /*Sezione no flex*/
-.debug section .big.container{           /*DEBUG*/
+.debug section .big.container{        /*DEBUG*/
     min-height: 500px;
-    background-color: rgb(52, 121, 0);
+    background-color: blue;
     border: 2px dashed black;
 }
 
@@ -139,11 +141,10 @@ footer section:last-child{
     padding: 15px 0;
 }
 
-.col.col-logo{
-    align-self: flex-start;
-    display: flex;
+.container .row.row-between{
+    justify-content: space-between;
 }
 
-.col.col-button{
-    align-items: flex-end;
+.row-between > *{
+    padding: 5px;
 }
