@@ -2,19 +2,21 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 img{
-    max-width: 100%;
+    max-width: 80%;
 }
 
 [class^='row']{
     display: flex;
+    align-items: center;
 }
 
 /*HEADER*/
 header{           /*DEBUG*/
-    background-color: aqua;
+    background-color: rgb(19, 92, 209);
 }
 
 .container{
@@ -22,9 +24,11 @@ header{           /*DEBUG*/
     margin: 0 auto;
 }
 
+.row-cols-3{
+    justify-content: space-between;
+}
 
 .row-cols-3 > .col{
-    flex-basis: calc(100% /3);
     margin: 10px 0;
     padding: 5px;
 }
@@ -35,37 +39,60 @@ header{           /*DEBUG*/
 }
 
 /*Colonne header in container*/
-.col.col-left{
-    text-align: left;
+nav > a{
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 12px;
 }
 
-.col.col-center{
-    text-align: center;
+.button button{
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+    font-size: 12px;
 }
 
-.col.col-right{
-    text-align: right;
+/*Sezione header*/
+.section-header .small.container{
+    color: white;
 }
 
-.section-header{           /*DEBUG*/
-    background-color: blue;
-    min-height: 200px;
+.small.container > h1{
+    font-size: 35px;
+    padding-bottom: 25px;
+}
+
+.small.container p{
+    line-height: 25px;
+}
+
+.small.container .button{
+    padding: 10px;
+}
+
+.button .black-button{
+    background-color: rgb(24, 24, 24);
+    color: white;
 }
 
 /*Piccolo container*/
 .section-header{
-    padding: 25px 0;
+    padding: 100px 0 50px 0;
+    background-image: url(../img/jumbo.png);
+    background-size: cover;
 }
 
 .small.container{
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
     padding: 25px 25px;
 }
 
 .debug .small.container{           /*DEBUG*/
     background-color: blueviolet;
-    height: 200px;
+    min-height: 200px;
     border: 2px dashed black;
 }
 
@@ -80,10 +107,33 @@ main > section{
 
 .col.col-big{
     flex-basis: 60%;
+    text-align: right;
+}
+
+.col.col-big .img-left{
+    text-align: left;
 }
 
 .col.col-small{
     flex-basis: 40%;
+}
+
+.container.section .text-item{
+    padding: 55px 110px 55px 0;
+}
+
+.container.section .row-reverse .text-item{
+    padding: 55px 0 55px 110px;
+} 
+
+.text-item h2{
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.text-item p{
+    font-size: 10px;
+    line-height: 15px;
 }
 
 .debug .col.col-small{            /*DEBUG*/
@@ -98,11 +148,31 @@ main > section:nth-child(2n){
     flex-direction: row-reverse;
 }
 
+.big.container div.text-item{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.big.container div.star{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.star p{
+    background-image: url(../img/stars.svg);
+    background-size: contain;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.button .blue{
+    background-color: rgb(22, 36, 36);
+    color: white;
+}
+
 /*Sezione no flex*/
-.debug section .big.container{        /*DEBUG*/
-    min-height: 500px;
-    background-color: blue;
-    border: 2px dashed black;
+section .big.container{        /*DEBUG*/
+    text-align: center;
 }
 
 /*FOOTER*/
@@ -127,6 +197,7 @@ footer > section:first-child{
 
 .debug .row-cols-5{            /*DEBUG*/
     min-height: 300px;
+    padding: 100px;
 }
 
 footer section:last-child{
